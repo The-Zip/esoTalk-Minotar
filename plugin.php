@@ -16,11 +16,7 @@ class ETPlugin_Minotar extends ETPlugin {
 	{
 		function avatar($member = array(), $className = "", $size = 64)
 		{
-			$default = C("plugin.Minotar.default") ? C("plugin.Minotar.default") : "mm";
-
-			$protocol = C("esoTalk.https") ? "https" : "http";
-			$url = "$protocol://minotar.net/helm/".trim($member["username"])."/$size";
-
+			$url = (C("esoTalk.https") ? "https" : "http")."://minotar.net/helm/".trim($member["username"])."/$size";
 			return '<img src="'.$url.'" alt="'.$member['username'].'\'s avatar." class="avatar'.($className !== "" ? " ".$className : "").'"/>';
 		}
 	}
