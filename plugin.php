@@ -9,6 +9,8 @@ ET::$pluginInfo["Minotar"] = array(
 	"authorEmail" => "connorsharries96@gmail.com",
 	"authorURL" => "http://github.com/charries96",
 	"license" => "MIT"
+        "dependencies" => array(
+            "esoTalk"       => "1.0.0g3",
 );
 
 class ETPlugin_Minotar extends ETPlugin {
